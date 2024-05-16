@@ -1,0 +1,14 @@
+
+    {%for p in contacto%}
+    <tr>
+        <td>{{p.id}} </td>
+        <td>{{p.nombre}} </td>
+        <td>{{p.email}} </td>
+        <td>{{p.telefono}} </td>
+        <td>{{p.mensaje}} </td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+</form>
+{% endblock contenido %}

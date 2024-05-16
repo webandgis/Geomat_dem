@@ -1,0 +1,35 @@
+{% extends 'aplicacion/home.html' %}
+
+{% block contenido %}
+
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5">
+    <div class="col-md-10 col-lg-8 mx-auto text-center">
+      <i class="far fa-paper-plane fa-2x mb-2 text-black"></i>
+      <h2 class="text-black mb-5">Login</h2>
+      <form action="" method="post" class="form-signup" style="padding-bottom: 10px;">
+        {% csrf_token %}
+        <div class="row input-group-newsletter">
+            <div class="col">
+                {{ form.username.label_tag }}
+                <input type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" class="form-control" placeholder="Usuario" aria-label="Usuario" required>
+                {{ form.username.errors }}
+            </div>
+            <div class="col">
+                {{ form.password.label_tag }}
+                <input type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" class="form-control" placeholder="Contraseña" aria-label="Contraseña" required>
+                {{ form.password.errors }}
+            </div>
+            
+            <div class="col-auto">
+                <button class="btn btn-primary" id="submitButton" type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+    
+  </div>
+    </div>
+  </div>
+
+
+{% endblock contenido %}
